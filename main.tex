@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+
+\begin{document}
+ex 1.1
+\begin{equation}
+p(y|x,z)p(x|z) = \frac{p(x,y,z)}{p(x,z)} \frac {p(x,z)}{p(z)} = \frac{p(x,y,z)}{p(z)} = p(x,y|z)
+\end{equation}
+
+
+\begin{equation}
+\frac{p(y|x,z)p(x|z)}{p(y|z)} = \frac{p(x,y,z)p(x,z)p(z)}{p(z)p(x,z)p(y,z)} = \frac{p(x,y,z)}{p(y,z)} = p(x|y,z)
+\end{equation}
+
+
+ex 1.2\\
+counting argument:
+\begin{equation}
+p(a,b) = p(a) + p(b) - p(a,b) \geq p(a) + p(b) - 1
+\end{equation}
+
+
+ex 1.9
+\begin{equation}
+\label{cond_int}
+\sum_{y} {p(x|y,z)p(y|z)} = \sum_{y}{\frac{p(x,y,z)}{p(y,z)}\frac{p(y,z)}{p(z)}} = \frac{\sum_{y}{p(x,y,z)}}{p(z)} = \frac{p(x,z)}{p(z)} = p(x|z)
+\end{equation}
+
+use: equation \ref{cond_int}
+
+\begin{equation}
+\begin{split}
+\sum_{w,y}{p(x|w,y,z)p(y|z)p(w|y,z)} = \sum_{y}{(p(y|z)\sum_{w}{p(x|w,y,z)p(w|y,z)})} =\\
+\sum_{y}{(p(y|z)p(x|y,z)} = p(x|z)
+\end{split}
+
+\end{equation}
+
+
+\end{document}
