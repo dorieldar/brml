@@ -1,0 +1,28 @@
+\documentclass[20pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+
+\begin{document}
+ex 8.5\\ 
+1.\\
+oddness:\\
+\begin{equation}
+\int_{-\infty}^{\infty}e^{-r^2}rdr = 0
+\end{equation}
+by change of variable:\\
+\begin{equation}
+\int_{-\infty}^{\infty}e^{\frac{-(r-\mu)^2}{\sigma^2}}\frac{(r-\mu)}{\sigma}dr = 0
+\end{equation} 
+compute the easy side of the equation (and ignore $\sigma$):\\
+\begin{equation}\label{easy}
+\mu\int_{-\infty}^{\infty}e^{\frac{-(r-\mu)^2}{\sigma^2}}dr = \mu\sqrt{2\pi\sigma^2}
+\end{equation}
+and so from \ref{easy}:\\
+\begin{equation}
+\int_{-\infty}^{\infty}e^{\frac{-(r-\mu)^2}{\sigma^2}}rdr = \mu\sqrt{2\pi\sigma^2}
+\end{equation} 
+
+
+\end{document}
