@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
-\usepackage{amsmath}
+\usepackage{amsmath,amssymb}
+\DeclareMathOperator{\E}{\mathbb{E}}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[latin1]{inputenc}
@@ -20,7 +21,7 @@ it remains to show $C = C_1C_2 = 1$
 ex 2.17
 \begin{equation}
 \begin{split}
-Emin(x,y) = \int_{y}[\int_{0}^{y}xdx + \int_{y}^{1}ydx]dy = \int_{y}(\frac{y^2}{2} + y(1-y))dy =\\ 
+\displaystyle \mathop{\mathbb{E}}[min(x,y)] = \int_{y}[\int_{0}^{y}xdx + \int_{y}^{1}ydx]dy = \int_{y}(\frac{y^2}{2} + y(1-y))dy =\\ 
 (\frac{y^3}{6} + \frac{y^2}{2} - \frac{y^3}{3}) \biggr\rvert_{0}^{1} = \frac{1}{3}
 \end{split}
 \end{equation}
