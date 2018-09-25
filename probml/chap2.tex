@@ -28,7 +28,7 @@ ex 2.17
 \end{split}
 \end{equation}
 
-ex. 2.10
+ex. 2.12
 \begin{equation}
 \begin{split}
 \displaystyle 
@@ -36,6 +36,20 @@ I(X,Y) = \sum_{x,y}p(y)p(x|y)[\log p(x|y) - \log p(x)] = -\HH(X|Y) - \sum_{x,y}p
 \end{split}
 \end{equation}
 
-
+ex. 2.14
+\begin{equation}
+\begin{split}
+\displaystyle 
+\HH(Y|X) = \int_{x}p(x)\HH(Y|X=x) = \int_{x}p(x)\HH(N(\rho x,\sigma^2(1-\rho^2))
+\end{split}
+\end{equation}
+see distribution of conditional mutlivariate in wikipedia
+\begin{equation}
+\begin{split}
+\displaystyle 
+\HH(Y|X) = \frac{1}{2}\log[\pi e\sigma^2(1-\rho^2)]
+\end{split}
+\end{equation}
+$$I(X;Y) = \HH(Y) - \\H(Y|X)= log(1-\rho^2)$$
 
 \end{document}
