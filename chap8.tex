@@ -1,5 +1,8 @@
 \documentclass[20pt]{extarticle}
 \usepackage{amsmath}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\HH}{\mathbb{H}}
+
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[latin1]{inputenc}
@@ -9,20 +12,33 @@ ex 8.5\\
 1.\\
 oddness:\\
 \begin{equation}
-\int_{-\infty}^{\infty}e^{-r^2}rdr = 0
+\int_{-\infty}^{\infty}e^{-\frac{1}{2}r^2}rdr = 0
 \end{equation}
 by change of variable:\\
 \begin{equation}
-\int_{-\infty}^{\infty}e^{\frac{-(r-\mu)^2}{\sigma^2}}\frac{(r-\mu)}{\sigma}dr = 0
+\int_{-\infty}^{\infty}e^{-\frac{1}{2}\frac{(r-\mu)^2}{\sigma^2}}\frac{(r-\mu)}{\sigma}dr = 0
 \end{equation} 
 compute the easy side of the equation (and ignore $\sigma$):\\
 \begin{equation}\label{easy}
-\mu\int_{-\infty}^{\infty}e^{\frac{-(r-\mu)^2}{\sigma^2}}dr = \mu\sqrt{2\pi\sigma^2}
+\mu\int_{-\infty}^{\infty}e^{-\frac{1}{2}\frac{(r-\mu)^2}{\sigma^2}}dr = \mu\sqrt{2\pi\sigma^2}
 \end{equation}
 and so from \ref{easy}:\\
 \begin{equation}
-\int_{-\infty}^{\infty}e^{\frac{-(r-\mu)^2}{\sigma^2}}rdr = \mu\sqrt{2\pi\sigma^2}
+\int_{-\infty}^{\infty}e^{-\frac{1}{2}\frac{(r-\mu)^2}{\sigma^2}}rdr = \mu\sqrt{2\pi\sigma^2}
 \end{equation} 
 
+
+Same line of arguments shows the results for the multivariate case
+$$\E(N(,\mu,\Sigma)) = \mu$$
+2. \\
+by change of variable it is enough to compute:\\
+$$\int_{-\infty}^{\infty}e^{-\frac{1}{2}\frac{r^2}{\sigma^2}}r^2dr $$
+
+using integration by parts: \\
+$$dv = e^{-\frac{1}{2}\frac{r^2}{\sigma^2}}r , u = r$$
+$$ v = -\sigma^2 e^{-\frac{1}{2}\frac{r^2}{\sigma^2}$$
+$uv$ is odd so:\\
+
+$$\int dvu= 0 + \sigma^2 \int_{-\infty}^{\infty}e^{-\frac{1}{2}\frac{r^2}{\sigma^2}} = \sigma^2 \sqrt{2\pi\sigma^2}$$
 
 \end{document}
