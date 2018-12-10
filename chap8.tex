@@ -58,6 +58,25 @@ $$\sqrt{det(\Sigma)}\int \exp^{z^Tz}dz = \sqrt{(2\pi)^n}\sqrt{det(\Sigma)}=\sqrt
 
 8.13\\
 for both metrics assume $\mu=0$ the $skewness=0$ due to oddness of integrand, for curtosis use integration by parts to derive result. \\
+
+8.20\\
+by change of variable assume $\mu = 0$ \\
+$$D = \int e^{-\frac{1}{2}x^{T}\Sigma^{-1}x}dx = \sqrt{det(2\pi\Sigma)}$$
+$$H = -D^{-1} \int (-\frac{1}{2}x^{T}\Sigma^{-1}x- \log{D})e^{-\frac{1}{2}x^{T}\Sigma^{-1}x}dx$$
+$$H = \frac{D^{-1}}{2}\int x^{T}\Sigma^{-1}xe^{-\frac{1}{2}x^{T}\Sigma^{-1}x}dx + D^{-1}\log{D}\int e^{-\frac{1}{2}x^{T}\Sigma^{-1}x}dx$$
+$$H = \frac{D^{-1}}{2}\int x^{T}\Sigma^{-1}xe^{-\frac{1}{2}x^{T}\Sigma^{-1}x}dx + \frac{\log(2\pi\Sigma)}{2}$$
+using result 8.5 for expectation of quadartic form $x^T\Sigma^{-1}x$: 
+$$H = \frac{1}{2}trace(I) + \frac{\log(2\pi\Sigma)}{2}$$
+$$H = \frac{Dim(x)}{2} + \frac{\log(2\pi\Sigma)}{2}$$
+$$H = \frac{Dim(x)}{2}  + \frac{\log(2\pi\Sigma)}{2}$$
+
+8.30 \\
+$$p(\theta |X) \approx p(X|\theta)$$
+$$\log p(X|\theta)= \sum_i \log \frac{e^{-\lambda}\lambda^{x_i}}{x_i!} = \sum_i (-\lambda + x_i\log \lambda - \log x_i!) =$$
+$$-n\lambda + \log \lambda \sum_i x_i + const(\lambda)$$
+$$F'(\lambda)= -n + \frac{\sum_i x_i}{\lambda}$$
+$$argmax(F(\lambda))= \frac{\sum_i x_i}{n}$$
+
 8.31\\
 mean: linearity of expectation
 variance:
