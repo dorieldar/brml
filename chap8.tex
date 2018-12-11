@@ -70,6 +70,16 @@ $$H = \frac{1}{2}trace(I) + \frac{\log(2\pi\Sigma)}{2}$$
 $$H = \frac{Dim(x)}{2} + \frac{\log(2\pi\Sigma)}{2}$$
 $$H = \frac{Dim(x)}{2}  + \frac{\log(2\pi\Sigma)}{2}$$
 
+8.22\\
+1.\\
+$$KL(\delta) = \sum{\log{P(x|\theta)} - \log{P(x|\theta + \delta)})P(x|\theta)}$$
+Taylor :
+$$KL(0) = 0 $$
+$$KL'(\delta)=-\sum{\frac{P(x|\theta)}{P(x|\theta + \delta)}\frac{\partial P}{\partial\delta}}$$
+$$KL'(0) = -\sum\frac{P(x|\theta + \delta) - P(x|\theta)}{\delta}= 
+\frac{1}{\delta}(\sum P(x|\theta + \delta) - \sum P(x|\theta) = 0$$
+
+hence the taylor expansion is from order 2 \\
 8.30 \\
 $$p(\theta |X) \approx p(X|\theta)$$
 $$\log p(X|\theta)= \sum_i \log \frac{e^{-\lambda}\lambda^{x_i}}{x_i!} = \sum_i (-\lambda + x_i\log \lambda - \log x_i!) =$$
